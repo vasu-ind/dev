@@ -126,6 +126,9 @@ if (!process.env.clientId || !process.env.clientSecret) {
   // Load in some helpers that make running Botkit on Glitch.com better
   require(__dirname + '/components/plugin_glitch.js')(controller);
 
+  // Load rtm manager
+  require(__dirname + '/components/rtm_manager.js')(controller);
+
   // enable advanced botkit studio metrics
   require('botkit-studio-metrics')(controller);
 
